@@ -1,0 +1,9 @@
+class AddSsl < ActiveRecord::Migration
+  def up
+    add_column :accounts, :ssl_enabled, :boolean, :default => 1
+  end
+
+  def down
+    remove_column :accounts, :ssl_enabled
+  end
+end
