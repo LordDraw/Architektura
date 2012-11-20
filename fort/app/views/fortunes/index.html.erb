@@ -6,9 +6,9 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:quotation) %></th>
-      <th><%= model_class.human_attribute_name(:source) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:nazwa_produktu) %></th>
+      <th><%= model_class.human_attribute_name(:cena) %></th>
+      <th><%= model_class.human_attribute_name(:ilosc) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -16,9 +16,9 @@
     <% @fortunes.each do |fortune| %>
       <tr>
         <td><%= link_to fortune.id, fortune_path(fortune) %></td>
-        <td><%= fortune.quotation %></td>
-        <td><%= fortune.source %></td>
-        <td><%=l fortune.created_at %></td>
+        <td><%= fortune.nazwa_produktu %></td>
+        <td><%= fortune.cena %></td>
+        <td><%= fortune.ilosc %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_fortune_path(fortune), :class => 'btn btn-mini' %>
