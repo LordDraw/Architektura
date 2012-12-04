@@ -1,3 +1,3 @@
 class Fortune < ActiveRecord::Base
-  attr_accessible :quotation, :source,:title
+  attr_accessible :nazwa, :ilosc,:dostepne_od
 end
