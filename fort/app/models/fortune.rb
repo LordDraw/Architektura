@@ -1,3 +1,3 @@
 class Fortune < ActiveRecord::Base
-  attr_accessible :nazwa_produktu, :cena,:ilosc
+  attr_accessible :quotation, :source,:title
 end
