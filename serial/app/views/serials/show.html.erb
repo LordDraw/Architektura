@@ -1,0 +1,44 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tags:</b>
+  <%= @serial.tag_list %>
+</p>
+<p>
+  <b>Cover:</b>
+<% if @serial.cover? %>
+  <%= image_tag @serial.cover.url %>
+  <br />
+  <%= link_to @serial.cover.url, @serial.cover.url %>
+<% end %>
+
+</p> 
+<p>
+  <b>Title:</b>
+  <%= @serial.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @serial.author %>
+</p>
+
+<p>
+  <b>Album:</b>
+  <%= @serial.album %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @serial.year %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @serial.length_min %>
+</p>
+
+
+<%= link_to 'Edit', edit_serial_path(@serial) %> |
+<%= link_to 'Back', serials_path %>
