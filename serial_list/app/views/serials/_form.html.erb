@@ -1,0 +1,17 @@
+<%= simple_form_for @serial, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :episode %>
+  <%= f.input :director %>
+  <%= f.input :name %>
+  <%= f.input :year %>
+  <%= f.input :length %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                serials_path, :class => 'btn' %>
+  </div>
+  <div class="field">
+  <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+  <%= f.text_field :tag_list %>
+</div>
+
+<% end %>
